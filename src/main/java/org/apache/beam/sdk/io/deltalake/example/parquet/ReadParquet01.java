@@ -16,10 +16,7 @@ import org.slf4j.LoggerFactory;
 
 public class ReadParquet01
 {
-    static final String TABLE_PATH =
-        "/Users/mbenenson/my/intuit/data-strmprocess/mb-proc-dec-08/data/delta-lake-01/*.parquet"    // ok
-        // "s3://idl-spp-deltalake-test-mb/delta-lake-stream-01/*.parquet"
-    ;
+    static final String TABLE_PATH = "data/delta-lake-stream-03/*.parquet";
 
     private static final Logger logger = LoggerFactory.getLogger(ReadParquet00.class);
 

@@ -7,30 +7,18 @@ import io.delta.standalone.data.RowRecord;
 
 import org.apache.hadoop.conf.Configuration;
 
-/**
- * https://devportal.intuit.com/app/dp/resource/4903311686969652377/msaasresource
- *
- * https://devportal.intuit.com/app/dp/resource/8506191388865920037/msaasresource
- * https://github.intuit.com/data-strmprocess/beam-sdks-java-io-deltalake
- * https://build.intuit.com/ip-data-platform/job/data-strmprocess/job/beam-sdks-java-io-deltalake/job/beam-sdks-java-io-deltalake/job/master/
- */
 
 public class DsrDemo01
 {
-    // Data created in SparkInAction2 project; com.intuit.my.deltalake.QuickStart03
     static final String TABLE_PATH =
-        // "/Users/mbenenson/my/intuit/data-strmprocess/mb-proc-dec-08/data/delta-lake-03/"
-        "s3a://idl-spp-deltalake-test-mb/delta-lake-stream-01/"
+        "data/delta-lake-stream-03"
     ;
 
     public static void main(String[] args)
     {
         Configuration hadoopConfiguration = new Configuration();
 
-        //* -------
-        // eiamCli login
-        // eiamCli getAWSTempCredentials -a 606483043239 -r Developer -p default
-        // aws s3 ls s3://idl-spp-deltalake-test-mb/delta-lake-01/  --profile default
+        /* -------  if reading from aws
         hadoopConfiguration.set("fs.s3a.aws.credentials.provider",
             "com.amazonaws.auth.profile.ProfileCredentialsProvider");
         //  ------*/

@@ -12,10 +12,7 @@ import org.apache.beam.sdk.values.PCollection;
 
 public class ReadParquet02
 {
-    static final String TABLE_PATH =
-//        "/Users/mbenenson/my/intuit/data-strmprocess/mb-proc-dec-08/data/delta-lake-01/*.parquet"    // ok
-        "s3://idl-spp-deltalake-test-mb/delta-lake-stream-01/*.parquet"
-    ;
+    static final String TABLE_PATH = "data/delta-lake-stream-03/*.parquet";
 
     public static void main(String[] args)
     {

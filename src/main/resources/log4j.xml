@@ -24,28 +24,6 @@
         </layout>
     </appender>
 
-
-    <logger name="com.intuit" additivity="false">       
-        <level value="INFO" />
-        <appender-ref ref="console" />
-        <appender-ref ref="file" />
-    </logger>
-    
-
-
-    <!--  ========  to investigate dynamo DB problems:   ->
-    <logger name="com.amazonaws" additivity="false">       
-        <level value="DEBUG" />
-        <appender-ref ref="console" />
-        <appender-ref ref="file" />
-    </logger>
-
-    <logger name="org.apache.http.wire" additivity="false">       
-        <level value="DEBUG" />
-        <appender-ref ref="console" />
-        <appender-ref ref="file" />
-    </logger>
-    <-  ================================================= -->
         
     <root>
         <level value="WARN" />

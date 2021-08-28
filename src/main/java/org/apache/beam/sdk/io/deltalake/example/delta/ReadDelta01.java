@@ -18,8 +18,6 @@ import org.joda.time.Duration;
 public class ReadDelta01
 {
     static final String TABLE_PATH =
-//         "/Users/mbenenson/my/intuit/data-strmprocess/mb-proc-dec-08/data/delta-lake-01/"    // multiversion
-//        "s3://idl-spp-deltalake-test-mb/delta-lake-stream-01/"
         "data/delta-lake-stream-03"
     ;
 
@@ -43,13 +41,11 @@ public class ReadDelta01
     {
         Pipeline pipeline = Pipeline.create(options);
 
-        //* -------
-        // eiamCli login
-        // eiamCli getAWSTempCredentials -a 606483043239 -r Developer -p default
-        // aws s3 ls s3://idl-spp-deltalake-test-mb/delta-lake-01/  --profile default
+        /* -------  if reading from aws
         Configuration hadoopConfiguration = new Configuration();
         hadoopConfiguration.set("fs.s3a.aws.credentials.provider",
             "com.amazonaws.auth.profile.ProfileCredentialsProvider");
+       // -----------------------*/
 
         PCollection<FileIO.ReadableFile> files = pipeline
 

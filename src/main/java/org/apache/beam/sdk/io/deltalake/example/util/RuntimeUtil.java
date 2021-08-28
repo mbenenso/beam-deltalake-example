@@ -46,7 +46,6 @@ public class RuntimeUtil
             filePattern.replace("*.parquet", "**") :
             filePattern;
 
-        // String allFiles = "/Users/mbenenson/my/intuit/data-strmprocess/mb-proc-dec-08/data/delta-lake-03/qqqqq";
         MatchResult match = FileSystems.match(allFiles, EmptyMatchTreatment.ALLOW);
         logger.info("getFiles found {} files for pattern {}", match.metadata().size(), allFiles);
         List<MatchResult.Metadata> matchMetadata = match.metadata();
@@ -59,8 +58,4 @@ public class RuntimeUtil
     }
 
 
-    public static void main(String[] args) throws IOException {
-
-        List<MatchResult.Metadata> list = getFiles("s3://idl-spp-deltalake-test-mb/delta-lake-stream-01/*.parquet", true);
-    }
 }
